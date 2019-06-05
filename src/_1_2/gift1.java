@@ -1,4 +1,4 @@
-//package _1_2;
+package _1_2;
 /*
 ID: raychun2
 LANG: JAVA
