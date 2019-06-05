@@ -1,4 +1,3 @@
-
 /*
 ID: raychun2
 LANG: JAVA
@@ -6,8 +5,6 @@ TASK: ride
 */
 import java.util.*;
 import java.io.*;
-
-
 
 public class template {
 
@@ -19,12 +16,13 @@ public class template {
 	static String result = "";
 	
 	//Input Variables
-	
+	static String [] list;
 	
 	public static void main(String[] args) {
 		
 		try {
 			
+			//Initialize in & out
 			in = new Scanner(new File(inFile));
 			out = new PrintWriter(new File(outFile));
 			
@@ -46,9 +44,9 @@ public class template {
 	}
 	
 	private static void init() {
-		
+		//Get data 
 		//Initialize Input Variables
-		//Get data and Initialize 
+		
 
 		
 	}
