@@ -62,10 +62,10 @@ public class template {
 	}
 	
 	//Algorithm methods
-	private static int change(String s) {
-
-		
-	}
+//	private static int change(String s) {
+//
+//		
+//	}
 
 
 
