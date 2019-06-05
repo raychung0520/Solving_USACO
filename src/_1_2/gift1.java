@@ -13,8 +13,8 @@ public class gift1 {
 	
 	static Scanner in;
 	static PrintWriter out;
-	static String inFile = "gift1.in";
-	static String outFile = "gift1.out";
+	static String inFile = "./input_output/gift1.in";
+	static String outFile = "./input_output/gift1.out";
 
 	static String result = "";
 

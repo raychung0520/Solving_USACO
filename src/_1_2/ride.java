@@ -13,8 +13,8 @@ public class ride {
 
 	static Scanner in;
 	static PrintWriter out;
-	static String inFile = "ride.in";
-	static String outFile = "ride.out";
+	static String inFile = "./input_output/ride.in";
+	static String outFile = "./input_output/ride.out";
 	//static StringBuilder result;
 	static String result = "";
 	
@@ -35,6 +35,7 @@ public class ride {
 			
 			//Write out file
 			out.println(result);
+	
 			
 			out.close();
 			in.close();
