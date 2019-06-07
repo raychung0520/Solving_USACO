@@ -21,6 +21,7 @@ public class gift1 {
 	// Input Variables
 	
 	static LinkedHashMap<String, Integer> list;
+	static int NP;
 
 	public static void main(String[] args) {
 		
@@ -30,7 +31,7 @@ public class gift1 {
 			out = new PrintWriter(new File(outFile));
 			
 			init();
-			out.println(solve());
+			out.print(solve());
 			
 			in.close();
 			out.close();
@@ -43,11 +44,41 @@ public class gift1 {
 	}
 	
 	private static void init() {
-		int NP = Integer.parseInt(in.nextLine());
+		NP = Integer.parseInt(in.nextLine());
 		list = new LinkedHashMap<String, Integer>();
 		for(int i = 0; i < NP; i++) {
 			list.put(in.nextLine(), 0);
 		}
+		
+		
+		// empty line for last line
+
+//		
+//		Iterator it = list.keySet().iterator();
+//		while(it.hasNext()) {
+//			String key = it.next().toString();
+//			int value = list.get(key);
+//			
+//			result += key + " " + value;
+//			
+//			if(it.hasNext())
+//				result += "\n";
+//		}
+		
+//		list.forEach((k,v) -> {
+//		    System.out.println(k + " " + v);
+//		});
+		
+//		for(Entry<String, Integer> list: list.entrySet()) {
+//			String name = list.getKey();
+//			int money = list.getValue();
+//			
+//			result += name + " " + money + "\n";
+//		}
+		
+	}
+
+	private static String solve() {
 		
 		for(int i = 0; i < NP; i++) {
 			String giver = in.nextLine();
@@ -68,31 +99,9 @@ public class gift1 {
 			}
 		}
 		
-		Iterator it = list.keySet().iterator();
-		while(it.hasNext()) {
-			String key = it.next().toString();
-			int value = list.get(key);
-			
-			result += key + " " + value;
-			
-			if(it.hasNext())
-				result += "\n";
+		for(String s: list.keySet()) {
+			result += s + " " + list.get(s) + "\n";
 		}
-		
-//		list.forEach((k,v) -> {
-//		    System.out.println(k + " " + v);
-//		});
-		
-//		for(Entry<String, Integer> list: list.entrySet()) {
-//			String name = list.getKey();
-//			int money = list.getValue();
-//			
-//			result += name + " " + money + "\n";
-//		}
-		
-	}
-
-	private static String solve() {
 
 		return result;
 	}
