@@ -44,6 +44,7 @@ public class gift1 {
 	}
 	
 	private static void init() {
+		// 
 		NP = Integer.parseInt(in.nextLine());
 		list = new LinkedHashMap<String, Integer>();
 		for(int i = 0; i < NP; i++) {
