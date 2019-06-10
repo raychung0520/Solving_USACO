@@ -84,50 +84,48 @@ public class milk2 {
 
 	private static String solve() {
 		// Process and Output
-		int maxContinous = 0;
+		int maxConti = 0;
 		int maxIdle = 0;
-
-		Stack<Integer> s = new Stack<Integer>();
-
-		s.add(list[0].in);
-		s.add(list[0].out);
 		
-		for(int i = 1; i < list.length; i++) {
-			int prev = s.peek();
+		int start = list[0].in;
+		int end = list[0].out;
+		
+		for(int i = 0; i < list.length; i++) {
+			
 			int currIn = list[i].in;
 			int currOut = list[i].out;
-
 			
-			if(currOut <= prev) {
+			if(currOut <= end) {
+				
 				continue;
-			}else if(currIn <= prev) {
-				s.pop();
-				s.add(currOut);
+				
+			}else if(currIn <= end) {
+				
+				end = currOut;
 			}else {
-				int idle = currIn - s.peek();
-
-				if(idle > maxIdle)
+				
+				int idle = currIn - end;
+				
+				if(idle > maxIdle) {
 					maxIdle = idle;
+				}
 				
-				int prevOut = s.pop();
-				int prevIn = s.pop();
-				int cont = prevOut - prevIn;
-
-				if(cont > maxContinous)
-					maxContinous = cont;
+				int conti = end - start;
 				
-				s.add(currIn);
-				s.add(currOut);
+				if(conti > maxConti)
+					maxConti = conti;
+				
+				start = currIn;
+				end = currOut;
+				
 			}
 			
+			int conti = end - start;
+			if(conti > maxConti)
+				maxConti = conti;
 			
+			result += maxConti + " " + maxIdle;
 		}
-
-		int last = s.pop() - s.pop();
-		if(last > maxContinous)
-			maxContinous = last;
-		
-		result += maxContinous + " " + maxIdle;
 
 		return result;
 
