@@ -64,13 +64,15 @@ public class friday {
 				list[(date+13)%7]++;
 				
 				if(j == 2) {
-					if(isLeaf(i) && !isCentury(i))
+					if(isLeaf(i) && !isCentury(i))    // explain with condition has isCentury
 						date += 29;
 					else
 						date += 28;
 				}else {
 					date += dates[j];
 				}
+				
+				
 				
 			
 			}
@@ -83,6 +85,8 @@ public class friday {
 			else
 				result += list[i] + " ";
 		}
+		//In this problem, there are 7 values for the answer, so we may not need to use for loop
+		//result = list[6] + " " list[0] + " " + list[1] + " "....
 
 		return result;
 
