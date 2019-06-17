@@ -30,9 +30,7 @@ public class inputoutput {
 		System.out.println(endTime - startTime);
 
 		startTime = System.currentTimeMillis();
-
 		BufferedReader f = new BufferedReader(new FileReader("./input_output/test.in"));
-
 		PrintWriter out2 = new PrintWriter(new BufferedWriter(new FileWriter("./input_output/test.out")));
 
 		for (int i = 0; i < 30000; i++) {
@@ -48,25 +46,22 @@ public class inputoutput {
 			out2.print("\n");
 
 		}
-		
+
 		f.close();
 		out2.close();
-		
+
 		endTime = System.currentTimeMillis();
-		
+
 		System.out.println(endTime - startTime);
-		
-		
-		
+
 		startTime = System.currentTimeMillis();
-		
+
 		StringBuilder sb = new StringBuilder();
-		
+
 		BufferedReader f2 = new BufferedReader(new FileReader("./input_output/test.in"));
 
 		PrintWriter out3 = new PrintWriter(new BufferedWriter(new FileWriter("./input_output/test.out")));
-		
-		
+
 		for (int i = 0; i < 30000; i++) {
 
 			StringTokenizer st = new StringTokenizer(f2.readLine());
@@ -80,17 +75,15 @@ public class inputoutput {
 			sb.append("\n");
 
 		}
-		
+
 		out3.print(sb);
-		
+
 		f2.close();
 		out3.close();
-		
+
 		endTime = System.currentTimeMillis();
-		
+
 		System.out.println(endTime - startTime);
-		
-		
 
 	}
 
