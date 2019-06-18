@@ -12,6 +12,7 @@ public class template {
 	static PrintWriter out;
 	static String inFile = "xxx.in";
 	static String outFile = "xxx.out";
+	
 	//static StringBuilder result;
 	static String result = "";
 	
@@ -36,7 +37,7 @@ public class template {
 			in.close();
 			
 		}catch(Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 		
