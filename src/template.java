@@ -1,8 +1,10 @@
 /*
 ID: raychun2
 LANG: JAVA
-TASK: ride
+TASK: gift1
 */
+
+//Ray
 import java.util.*;
 import java.io.*;
 
@@ -67,8 +69,6 @@ public class template {
 //
 //		
 //	}
-
-
 
 
 }
