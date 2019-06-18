@@ -4,7 +4,6 @@ LANG: JAVA
 TASK: gift1
 */
 
-//Ray
 import java.util.*;
 import java.io.*;
 
