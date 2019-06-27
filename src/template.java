@@ -11,13 +11,9 @@ public class template {
 
 	static Scanner in;
 	static PrintWriter out;
-	static String inFile = "xxx.in";
-	static String outFile = "xxx.out";
+
 	
-	//static StringBuilder result;
-	static String result = "";
-	
-	//Input Variables
+	//Input Vaiables
 	static String [] list;
 	
 	public static void main(String[] args) {
@@ -25,14 +21,14 @@ public class template {
 		try {
 			
 			//Initialize in & out
-			in = new Scanner(new File(inFile));
-			out = new PrintWriter(new File(outFile));
+			in = new Scanner(new File("xxx.in");
+			out = new PrintWriter(new File("xxx.out"));
 			
 			init();
-			result = solve();
+			
 			
 			//Write out file
-			out.println(result);
+			out.print(solve());
 			
 			out.close();
 			in.close();
@@ -56,9 +52,8 @@ public class template {
 
 	private static String solve() {
 		// Process and Output
+		String result = "";
 		
-		
-				
 		return result;
 		
 	}
